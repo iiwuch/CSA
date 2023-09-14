@@ -20,4 +20,3 @@ public class Yummy {
         System.out.println("cream");
     }
 }
-
