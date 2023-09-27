@@ -1,9 +1,9 @@
 public class MathEx {
     public static void main(String [] args){
         System.out.println(swap(132));
-        System.out.println(swap(276));
         System.out.println(swap(304));
-        System.out.println(timeLeft)
+        timeLeft(1, 15, 4, 36);
+        timeLeft(1,34,8,20);
     }
     
     public static int swap(int y){
@@ -14,11 +14,15 @@ public class MathEx {
         return result;
     }
 
-    public static int timeLeft(int curHour, int curMin, int depHour, int, depMin){
-        int curHour =
-        int curMin =
-        int depHour =
-        int depMin =
-
+    public static void timeLeft(int curHour, int curMin, int depHour, int depMin){
+        
+        int result = (depMin + depHour*60) - (curHour*60 + curMin);
+        int mins = result%60;
+        int hours = result/60;
+        System.out.println(hours + " hours and " + mins + " minutes");
     }
+
+    public static int dayOfWeek(int day)
 }
+
+
