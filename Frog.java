@@ -1,7 +1,7 @@
 public class Frog {
 	private String name;
-	private int xPos;
-	private int yPos;
+	private static int xPos;
+	private static int yPos;
 	
 	public Frog(String n,int x, int y)		// constructor
 	{
