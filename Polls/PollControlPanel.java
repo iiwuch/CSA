@@ -1,3 +1,4 @@
+package Polls;
 /*
  * Implements the control panel for the Poll program
  */
