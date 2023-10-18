@@ -116,11 +116,11 @@ package Polls;
      y += (r + 20);
      g.setColor(Color.BLACK);
     
-     g.drawString(name1 , x - r, y);
+     g.drawString(name1 +": "+ count1 , x - r, y);
  
-     g.drawString(name2 , x, y);
+     g.drawString(name2 +": "+ count2 , x, y);
  
-     g.drawString(name3 , x + r, y);
+     g.drawString(name3 +": "+ count3 , x + r, y);
  
      // Display the color squares:
      y += 5;
@@ -135,10 +135,10 @@ package Polls;
  
    // Returns the number of degrees in a pie slice that
    // corresponds to count / total, rounded to the nearest integer.
-   private int countToDegrees(int count, int total)
+   private int countToDegrees(double count, double total)
    {
-     int result = count/total;
-     return result;
+     double degrees = (count/total)*360;
+     return (int)degrees;
    }
  
    // Draws a sector, centered at x, y, of radius r,
