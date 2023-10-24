@@ -34,7 +34,7 @@ public class Line {
 
 	public boolean sameLength(Line otherLine)
 	{
-		return Math.abs(this - otherLine) <= .001;
+		return Math.abs(this.distance() - otherLine.distance()) <= .001;
 	}
 
 	public double slope()
@@ -82,9 +82,7 @@ public class Line {
 		System.out.println("distance = " + dist);
 		System.out.println("Midpoint = " + p1);
 		
-		//System.out.println("distance = " + l2.distance());
-		//System.out.println("Same length? " + l1.sameLength(l2));
-
+		System.out.println("distance = " + l2.distance());
+		System.out.println("Same length? " + l1.sameLength(l2));
 	}
-
 }
