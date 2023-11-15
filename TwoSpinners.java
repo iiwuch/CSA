@@ -13,7 +13,7 @@ public class TwoSpinners {
     public int spin(int min, int max){
         int result = 0;
         if (min < max){
-        result = (int)(Math.random()*max + min);
+        result = (int)(Math.random()*(max-1) + min);
         return result;
         }
         else return result;
@@ -37,29 +37,31 @@ public class TwoSpinners {
         }
 
         if (rollc == roll1){
+
             roll1 = p1.spin(1,10);
             rollc = comp.spin(2,8);
-            
-                if (rollc < roll1){
-                    points = roll1 - rollc;
-                    System.out.println("You win! " + points + " points");
+            if (rollc < roll1){
+                points = roll1 - rollc;
+                System.out.println("Reroll: You win! " + points + " points");
             }
 
-                if (rollc > roll1){
-                    points = roll1 - rollc;
-                    System.out.println("You Lose! " + points + " points");
-                }
+            if (rollc > roll1){
+                points = roll1 - rollc;
+                System.out.println("Reroll: You Lose! " + points + " points");
+            }
 
-                if (rollc == roll1) {
-                    points = roll1 - rollc;
-                    System.out.println("Tie! " + points + " points");
-                    }
+            if (rollc == roll1) {
+                points = roll1 - rollc;
+                System.out.println("Reroll: Tie! " + points + " points");
+            }
 
-                }
+        }
     }
 
     public static void main(String[] args) {
         TwoSpinners ds = new TwoSpinners();
+        // System.out.println(ds.spin(1,10));
+        // System.out.println(ds.spin(2,8));
         for(int i = 0; i < 10; i++){    //This will save you time by running playground 10 times
             ds.playRound();
         }
