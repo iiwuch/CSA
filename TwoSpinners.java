@@ -23,7 +23,6 @@ public class TwoSpinners {
     public void playRound(){
         TwoSpinners p1 = new TwoSpinners();
         TwoSpinners comp = new TwoSpinners();
-        
         roll1 = p1.spin(1,10);
         rollc = comp.spin(2,8);
         
@@ -58,8 +57,7 @@ public class TwoSpinners {
 
                 }
     }
-        // add code here    	
-   
+
     public static void main(String[] args) {
         TwoSpinners ds = new TwoSpinners();
         for(int i = 0; i < 10; i++){    //This will save you time by running playground 10 times
@@ -67,4 +65,3 @@ public class TwoSpinners {
         }
     }
 }
-
