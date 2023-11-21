@@ -13,7 +13,7 @@ public class TwoSpinners {
     public int spin(int min, int max){
         int result = 0;
         if (min < max){
-        result = (int)(Math.random()*(max-1) + min);
+        result = (int)(Math.random()*(max-min+1));
         return result;
         }
         else return result;
