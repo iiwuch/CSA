@@ -9,7 +9,7 @@ public class Die {
     }
 
     public void roll(){
-        numDots = (int) (Math.random()*6 +1);
+        numDots = (int) (Math.random()*6) + 1;
     }
     public int getNumDots(){
         return numDots;
