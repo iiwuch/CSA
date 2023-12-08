@@ -29,7 +29,7 @@ public class WhileLoops {
         return years;
     }
 
-    public void printSum(int n){ //fix code
+    public void printSum(int n){
         int a = 1;
         int sum = 1;
         System.out.print("1");
