@@ -11,11 +11,10 @@ public class WhileLoops {
     }
 
     public int sumDigits(int x){
-        int num = 0;
         int sum = 0;
-        while(num < x){
-            num++;
-            sum += num;
+        while(0 < x){
+            sum += x%10;
+            x /= 10;
         }
         return sum;
     }
