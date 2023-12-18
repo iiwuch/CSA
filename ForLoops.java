@@ -38,13 +38,25 @@ public class ForLoops {
         }
     }
     public void dollarsAndStars(){
-        for(int x=1; x < 8; x++){
-            
+        for(int x=1; x <= 7; x++){
+            for(int i = 2; i<=x; i++){
+                System.out.print("**");
+            }
+            for(int i = 7; i>=x; i--){
+                System.out.print("$");
+            }
+            for(int i = 14; i>=x*2; i-=2){
+                System.out.print("**");
+            }    
+            for(int i = 7; i>=x; i--){
+                System.out.print("$");
+            }
+             for(int i = 2; i<=x; i++){
+                System.out.print("**");
+            }  
+            System.out.println();
         }
     }
-
-
-
     public static void main(String [] args){
         ForLoops test = new ForLoops();
         System.out.println(test.addEvens(5));
@@ -58,6 +70,7 @@ public class ForLoops {
         test.sillyNumbers();
         System.out.println();
         test.sillyNumbers2();
-
+        System.out.println();
+        test.dollarsAndStars();
     }
 }
