@@ -59,13 +59,13 @@ public class ForLoops {
     }
     public static void main(String [] args){
         ForLoops test = new ForLoops();
-        System.out.println(test.addEvens(5));
+        System.out.println(test.addEvens(18));
         System.out.println(test.addEvens(6));
-        System.out.println(test.addEvens(8));
+        System.out.println(test.addEvens(10));
         System.out.println();
+        test.printSquaresBack(5);
         test.printSquaresBack(8);
-        test.printSquaresBack(6);
-        test.printSquaresBack(4);
+        test.printSquaresBack(10);
         System.out.println();
         test.sillyNumbers();
         System.out.println();
