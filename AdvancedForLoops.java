@@ -1,11 +1,11 @@
 public class AdvancedForLoops {
 
-    public void eights(){ //fix this 
-        for(int x = 8; x>= 0; x-=2){
+    public void eights(){
+        for(int x = 8; x> 0; x-=2){
             for(int y = 0; y<8-x; y+=2){
                 System.out.print(" ");
             }
-            for(int z = 0; z<=x; z++){
+            for(int z = 0; z<x; z++){
                 System.out.print(x);
             }
             System.out.println();
