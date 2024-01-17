@@ -28,32 +28,46 @@ public class StringExercises {
         return dateE;
     }
 
-    // public static String convertDate2(String dateA){
-    //     String day = if(dateA.charAt(dateA.substring(0,2));
-    //     String month =  ;
-    //     String year;
-    //     return day + month + year;
-    // }
+    public static String convertDate2(String dateA){
+        String day1 = dateA.substring(3,6);
+        String month1 = dateA.substring(0,3);
+        int month = dateA.indexOf("/");
+        int day = dateA.indexOf("/", month);
+        int year = dateA.indexOf("/", day);
+        if(day<2) day1 = "0" + day1;
+        if(month<2) month1 = "0" + month1;
+        return " "+ day1+month1+year;
+       
+    }
 
-    // public static boolean startsWith(String s, String prefix){
-    //     int pre = prefix.length();
-    //     return (s.substring(0,pre) == prefix);
+    public static boolean startsWith(String s, String prefix){
+        return (s.indexOf(prefix) == 0);
+    }
+
+    public static boolean endsWith(String s, String suffix){
+        int lsuffix = suffix.length();
+        int ls = s.length();
+        return (s.lastIndexOf(suffix) == ls-lsuffix);
+    }
+
+    // public static String removeTag(String string, String tag){
+
     // }
 
     public static void main(String[] args) {
-        System.out.println(scroll("Hello World"));
-        System.out.println(scroll("happy"));
-        System.out.println(scroll("h"));
-        System.out.println(convertName(" Reubenstein, Lori Renee "));
-        System.out.println(convertName("Biden,Joe"));
-        System.out.println(convertName("the Clown, Bozo"));
-        System.out.println(negative("0010111001"));
-        System.out.println(negative("11111111"));
-        System.out.println("04/20/2014 becomes " + convertDate("04/20/2014"));
-        // System.out.println("04/20/2014 becomes" + dateString2("04/20/2014"));
-        // System.out.println("4/20/2014 becomes" + dateString2("4/20/2014"));
-        // System.out.println("04/2/2014 becomes" + dateString2("04/2/2014"));
-        // System.out.println("4/2/2014 becomes" + dateString2("4/2/2014"));
+        // System.out.println(scroll("Hello World"));
+        // System.out.println(scroll("happy"));
+        // System.out.println(scroll("h"));
+        // System.out.println(convertName(" Reubenstein, Lori Renee "));
+        // System.out.println(convertName("Biden,Joe"));
+        // System.out.println(convertName("the Clown, Bozo"));
+        // System.out.println(negative("0010111001"));
+        // System.out.println(negative("11111111"));
+        // System.out.println("04/20/2014 becomes " + convertDate("04/20/2014"));
+        System.out.println("04/20/2014 becomes" + convertDate2("04/20/2014"));
+        System.out.println("4/20/2014 becomes" + convertDate2("4/20/2014"));
+        System.out.println("04/2/2014 becomes" + convertDate2("04/2/2014"));
+        System.out.println("4/2/2014 becomes" + convertDate2("4/2/2014"));
         // System.out.println("\nstartsWith");
         // System.out.println(startsWith("architecture", "arch"));
         // System.out.println(startsWith("architecture", "a"));
