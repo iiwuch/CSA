@@ -23,14 +23,15 @@ public class Complex {
         return num;
     }
 
-    public Complex multiply(Complex other){
-        double a = this.a
-        double b = 
-        Complex product = new product()
+    public Complex Multiply(Complex other){
+        double real = (this.a*other.b) - this.b*other.b;
+        double imaginary = (this.a*other.b) + this.b*other.a;
+        Complex product = new Complex(real, imaginary);
+        return product;
     }
 
     public String toString(){
-        String string = this.a + " + " + this.b + "i";
+        String string = a + " + " + b + "i";
         return string;
     }
 
@@ -39,18 +40,27 @@ public class Complex {
         Complex test2 = new Complex(3,-4);
         Complex test3 = new Complex(-3,-4);
         Complex test4 = new Complex(0.0,4);
-        Complex test5 = new Complex(-3,0.0);
+        Complex test5 = new Complex(-3,5);
         Complex test6 = new Complex(0.0,-3);
+        Complex test7 = new Complex(5);
         Complex test1a2 = test1.add(test2);
         Complex test3a4 = test3.add(test4);
+        Complex test5a6 = test5.add(test6);
         System.out.println(test1);
         System.out.println(test2);
         System.out.println(test3);
         System.out.println(test4);
         System.out.println(test5);
         System.out.println(test6);
+        System.out.println(test7);
         System.out.println(test1a2);
         System.out.println(test3a4);
-        System.out.println(test3.abs());
+        System.out.println(test5a6);
+        System.out.println(test1.abs());
+        System.out.println(test2.abs());
+        System.out.println(test5.abs());
+        System.out.println(test1.Multiply(test2));
+        System.out.println(test3.Multiply(test4));
+        System.out.println(test5.Multiply(test6));
         }    
 }
