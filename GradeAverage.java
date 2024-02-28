@@ -80,5 +80,4 @@ public class GradeAverage {
 		System.out.println(sr5.showsImprovement());
 		System.out.println(sr5.finalGrade());		
 	}
-
 }
