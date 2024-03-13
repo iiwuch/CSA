@@ -82,7 +82,7 @@ public class NitalTester {
         int[][] n3 = {{1,2,1},{2,1,1},{1,1,2}};
         int[][] n4 = {{1,2,3},{3,1,2},{7,8,9}};
         int[][] n5 = {{1,2},{1,2}};
-	int[][] n6 = {{1,1},{2,2}};
+	    int[][] n6 = {{1,1},{2,2}};
 
         int [] arr1 = {1,2,3};
         int [] arr2 = {3,1,2};
@@ -100,6 +100,6 @@ public class NitalTester {
         System.out.println(isNital(n3));
         System.out.println(isNital(n4));
         System.out.println(isNital(n5));
-	System.out.println(isNital(n6));
+	    System.out.println(isNital(n6));
     }
 }
