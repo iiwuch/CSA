@@ -23,11 +23,9 @@ public class WordPuzzle {
      */
     public boolean toBeLabeled(int r, int c, boolean [][] blackBoxes){
         /* to be implemented in part a */
-		
-		
-		
-		
-		return false;    // replace this
+		if () return true;
+        else return false;
+        // replace this
     }
 
     /* Write the WordPuzzle Constructor.  The constructor should initialize the

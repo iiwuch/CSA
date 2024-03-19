@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 public class NitalTester {
 
     /** Returns true if and only if every value in arr1 appears in arr2.
@@ -52,10 +54,12 @@ public class NitalTester {
      */
     public static int [] getColumn(int[][] arr2D, int c){
 		/* to be written in part a */
-        
-		
-		
-		return new int[1];  //replace this
+        int col = arr2D[0].length;
+        int[] result = new int[col];
+        for(int i = 0; i< col; i++){
+            result[i]= arr2D[i][c];
+        }
+		return result;
     }
 
     /* Write the method isNital below.  You must use getColumn,
@@ -69,14 +73,17 @@ public class NitalTester {
      */
     public static boolean isNital(int[][] square){
 		/* to be written in part b */
-		
-        
-		
-		
-        return false;   // replace this
+		if(containsRepeats(square[0])) return false;
+        for(int x = 1; x < square[0].length; x++){
+            if (!hasAllValues(square[0], square[x])) return false;
+        }
+        for(int x = 1; x < square.length; x++){
+            if (!hasAllValues(square[0], getColumn(square, x))) return false;
+        }
+        return true;
     }
 
-    public static void main(String[] args){
+public static void main(String[] args){
         int[][] n1 = {{1,2,3},{2,3,1},{3,1,2}};
         int[][] n2 = {{10,30,20,0},{0,20,30,10},{30,0,10,20},{20,10,0,30}};
         int[][] n3 = {{1,2,1},{2,1,1},{1,1,2}};
@@ -84,16 +91,8 @@ public class NitalTester {
         int[][] n5 = {{1,2},{1,2}};
 	    int[][] n6 = {{1,1},{2,2}};
 
-        int [] arr1 = {1,2,3};
-        int [] arr2 = {3,1,2};
-        int [] arr3 = {2,1,2};
-        System.out.println(hasAllValues(arr1,arr2));
-        System.out.println(hasAllValues(arr1,arr3));
-        System.out.println(hasAllValues(arr3,arr2));
-        int[] arr4 = {1,2,3,4,5,6};
-        int[] arr5 = {3,2,1,2,3};
-        System.out.println(containsRepeats(arr4));
-        System.out.println(containsRepeats(arr5));
+        System.out.println(Arrays.toString(getColumn(n1, 2)));
+        System.out.println(Arrays.toString(getColumn(n4, 0)));
 
         System.out.println(isNital(n1));
         System.out.println(isNital(n2));
