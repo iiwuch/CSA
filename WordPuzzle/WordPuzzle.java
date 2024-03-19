@@ -23,9 +23,11 @@ public class WordPuzzle {
      */
     public boolean toBeLabeled(int r, int c, boolean [][] blackBoxes){
         /* to be implemented in part a */
-		if () return true;
+		if (blackBoxes[0][c] == true) return true;
+        if (blackBoxes[r][c] == true && blackBoxes[r-1][c] == false) return true;
+        if (blackBoxes[r][0] == true) return true;
+        if (blackBoxes[r][c] == true && blackBoxes[r][c-1] == false) return true;
         else return false;
-        // replace this
     }
 
     /* Write the WordPuzzle Constructor.  The constructor should initialize the
@@ -35,6 +37,7 @@ public class WordPuzzle {
     The number is positive if the box is labeled and 0 if the box is not
     labeled.
      */
+
     /** Constructs a Word Puzzle grid.
      * Precondition: There is at least one row in blackBoxes
      * Postcondition:
@@ -48,8 +51,6 @@ public class WordPuzzle {
     public WordPuzzle(boolean [][] blackBoxes){
         /* to be implemented in part b */
         
-		
-		
     }
 
 
@@ -63,7 +64,6 @@ public class WordPuzzle {
         }
         return s;
     }
-
 
     public static void main(String[] args){
 		/* represents the word puzzle in the example */
