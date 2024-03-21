@@ -1,4 +1,4 @@
-public class Conditionals {
+public class conditionals {
     public boolean chimpTrouble(boolean aSmile, boolean bSmile){
         if (aSmile == bSmile){
             return true;
@@ -42,7 +42,7 @@ public class Conditionals {
     }
 
     public static void main(String [] args){
-        Conditionals ab = new Conditionals();
+        conditionals ab = new conditionals();
         System.out.println(ab.chimpTrouble (true, true));
         System.out.println(ab.chimpTrouble (false, false));
         System.out.println(ab.chimpTrouble (true, false));
