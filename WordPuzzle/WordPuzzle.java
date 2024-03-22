@@ -1,4 +1,5 @@
 package WordPuzzle;
+
 public class WordPuzzle {
     /* This question uses 2 classes, a Box class that represents an individual square in the puzzle
     and a WordPuzzle class that represents a word puzzle grid.
@@ -23,10 +24,11 @@ public class WordPuzzle {
      */
     public boolean toBeLabeled(int r, int c, boolean [][] blackBoxes){
         /* to be implemented in part a */
-		if (blackBoxes[0][c] == true) return true;
-        if (blackBoxes[r][c] == true && blackBoxes[r-1][c] == false) return true;
-        if (blackBoxes[r][0] == true) return true;
-        if (blackBoxes[r][c] == true && blackBoxes[r][c-1] == false) return true;
+		if (blackBoxes[r][c] == true) return false;
+        if (r==0) return true;
+        if (c==0) return true;
+        if (blackBoxes[r-1][c] == true) return true;
+        if( blackBoxes[r][c-1] == true) return true;
         else return false;
     }
 
@@ -50,7 +52,26 @@ public class WordPuzzle {
      */
     public WordPuzzle(boolean [][] blackBoxes){
         /* to be implemented in part b */
-        
+        puzzle = new Box1[blackBoxes.length][blackBoxes[0].length];
+        int count = 1;
+          
+        for(int i = 0; i < blackBoxes.length; i++){
+            for(int x = 0; x < blackBoxes[0].length; x++){
+                puzzle[i][x] = new Box1(blackBoxes[i][x], 0);
+            }
+        } 
+        for(int i = 0; i < puzzle.length; i++){
+            for(int x = 0; x < puzzle[0].length; x++){
+                if(toBeLabeled(i, x, blackBoxes)){
+                    puzzle[i][x] = new Box1(false, count); 
+                    count++;
+                } 
+                else if(blackBoxes[i][x]== false){
+                    puzzle[i][x] = new Box1(false, 0);
+                } 
+                else puzzle[i][x] = new Box1(true, 0); 
+            }
+        }
     }
 
 
