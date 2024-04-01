@@ -97,12 +97,12 @@ public class WordDuoList {
         if (this.numMatches() > 0){
             for(int i = 0; i < allDuos.size(); i++){
                 WordDuo move = allDuos.get(i);
-                if (numMatches() > 0);
+                if(move.getFirst().equals(move.getSecond())){
+                    allDuos.remove(i);
+                    allDuos.add(0, move);
+                }
             }
-        }
-        
-		
-		
+        }	
     }
 
     public static void main(String[] args){
