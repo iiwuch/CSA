@@ -104,7 +104,7 @@ public class ScantArray {
         System.out.println(sa1.getValueAt(2,3));
         System.out.println("rows "+ sa1.getNumRows());
         System.out.println("columns "+ sa1.getNumColumns());
-
+        System.out.println();
         System.out.println(sa1);
 
         sa1.removeColumn(1);
@@ -119,16 +119,17 @@ public class ScantArray {
         sa2.addEntry(1,2,9);
         sa2.addEntry(2,4,4);
 
-        System.out.println(sa2.getValueAt(0,0));
-        System.out.println(sa2.getValueAt(1,1));
-        System.out.println(sa2.getValueAt(2,2));
+        System.out.println(sa2.getValueAt(2,1));
+        System.out.println(sa2.getValueAt(4,6));
+        System.out.println(sa2.getValueAt(5,0));
         System.out.println("rows "+ sa2.getNumRows());
         System.out.println("columns "+ sa2.getNumColumns());
 
         System.out.println(sa2);
-
         sa2.removeColumn(2);
 
+        System.out.println("rows "+ sa2.getNumRows());
+        System.out.println("columns "+ sa2.getNumColumns());
         System.out.println(sa2);
 
         /******* please add one more test of your own *******/
