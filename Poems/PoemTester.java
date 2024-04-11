@@ -1,6 +1,5 @@
 package Poems;
 
-
 public class PoemTester {
     public static void main(String[] args) {
         Poem p1 = new Poem(12);

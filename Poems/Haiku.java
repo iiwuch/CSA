@@ -7,8 +7,8 @@ public class Haiku extends Poem {
     }
 
     public int getSyllables(int k){
-        if(k==1) return 5;
-        if(k==1) return 5;
+        if(k == 1) return 5;
+        if(k == 3) return 5;
         else return 7;
     }
     

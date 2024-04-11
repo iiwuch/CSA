@@ -1,19 +1,18 @@
 package Poems;
 
+
 public class Poem {
     private int lines; 
 
     public Poem(){
         lines = 0;
-        printRhythm();
     }
 
     public Poem (int l){
         this.lines = l;
-        printRhythm();
     }
 
-    public int getNumLines(){
+    public int getNumlines(){
         return lines;
     }
 
@@ -23,8 +22,8 @@ public class Poem {
 
     public void print_Rhythm(int k){
         for(int i = 0; i < k; i++){
-            if(i != k) System.out.println("sa-");
-            else System.out.println("la");
+            if(i != k-1) System.out.print("ta-");
+            else System.out.print("ta");
 
         }
         System.out.println();
