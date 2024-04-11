@@ -1,6 +1,5 @@
 package Poems;
 
-
 public class Poem {
     private int lines; 
 
