@@ -12,7 +12,6 @@ public class SavingsAccount extends Account {
      }
     }
 
-    @Override
     public double monthlyInterest() {
         double result = (super.currentBalance()*interestRate)/12.0;
         return result;
